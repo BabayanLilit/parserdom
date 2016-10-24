@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -16,12 +15,14 @@ class CreateVacanciesTable extends Migration
         Schema::create('vacancies', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('title');
             $table->bigInteger('external_id')->unique();
-            $table->string('name');
-            $table->string('pay')->nullable();
-            $table->text('description')->nullable();
-            $table->string('company')->nullable();
-            $table->bigInteger('city_id')->nullable();
+            $table->bigInteger('employer_id')->nullable();
+            $table->string('employer_name')->nullable();
+            $table->string('salary')->nullable();
+            $table->text('responsibility')->nullable();
+            $table->text('requirement')->nullable();
+            $table->string('city')->nullable();
             $table->date('date')->nullable();
         });
     }
