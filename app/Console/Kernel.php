@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command('parse:vacancies --pages-count=10')
+         $schedule->command('parse:vacancies --pages-per-city=10')
                   ->hourly();
     }
 

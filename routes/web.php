@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/parse', ['as' => 'vacancy.parse', 'uses' => 'VacancyController@parseTodayVacancies']);
+Route::get('/{city}', ['as' => 'vacancy.index', 'uses' => 'VacancyController@index']);
+Route::get('/', ['as' => 'vacancy.index', 'uses' => 'VacancyController@index']);

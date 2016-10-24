@@ -1,0 +1,16 @@
+.vacancy-list .panel-heading .form {
+  float:right;
+}
+
+.vacancy-list .panel-heading::after , .vacancy-list .panel-heading form::after {
+  content:'';
+  display: block;
+  clear: both;
+}
+.vacancy-list .panel-heading form .btn, .vacancy-list .panel-heading form .form-group{
+  float:left;
+  margin-right: 15px;
+}
+.vacancy-list .city-form {
+  float:right;
+}

@@ -18,3 +18,15 @@ Vue.component('example', require('./components/Example.vue'));
 const app = new Vue({
     el: '#app'
 });
+$(function () {
+    var $body = $('body');
+
+    $body
+        .on('submit', '.city-form', function (e) {
+            e.preventDefault();
+            var $form = $(this),
+                $input = $form.find('input[name="city"]');
+
+            location.href = $form.attr('action') + '/' + $input.val();
+        });
+});
